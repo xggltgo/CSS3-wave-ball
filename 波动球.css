@@ -1,0 +1,75 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-color: black;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+}
+
+#outLayer{
+	height: 320px;
+	width: 320px;
+	background-color: white;
+	border-radius: 50%;
+	position: relative;
+	filter: contrast(20);
+	
+}
+
+.blackball,
+.redball{
+	border-radius: 50%;
+	height: 120px;
+	width: 120px;
+	background-color: black;
+	position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    filter: blur(10px);	
+	
+}
+
+.redball{
+	height: 60px;
+	width: 60px;
+	background-color: red;
+	animation: roll 5s infinite alternate;
+}
+
+@keyframes roll{
+	0%,
+  100% {
+    left: 50px;
+    width: 60px;
+    height: 60px;
+  }
+  4%,
+  20%,
+  41%,
+  54%,
+  70% {
+    width: 60px;
+    height: 60px;
+  }
+  10%,
+  60% {
+    width: 50px;
+    height: 70px;
+  }
+  34%,
+  90% {
+    width: 70px;
+    height: 50px;
+  }
+  50% {
+    left: 270px;
+    width: 60px;
+    height: 60px;
+  }
+}
